@@ -1,0 +1,1090 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/jquery-ui.min.css" rel="stylesheet">
+<style>
+
+@font-face {
+    font-family: "lato";
+	 font-weight:300;
+    src: url(fonts/lato/Lato-Light.ttf) format("truetype");
+}
+@font-face {
+    font-family: "lato";
+	 font-weight:normal;
+    src: url(fonts/lato/Lato-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "lato";
+	 font-weight:100;
+    src: url(fonts/lato/Lato-Hairline.ttf) format("truetype");
+}
+@font-face {
+    font-family: "lato";
+	 font-weight:bold;
+    src: url(fonts/lato/Lato-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "lato";
+	 font-weight:900;
+    src: url(fonts/lato/Lato-Black.ttf) format("truetype");
+}
+@font-face {
+    font-family: "lato";
+	 font-weight:100;
+	 font-style:italic;
+    src: url(fonts/lato/Lato-HairlineItalic.ttf) format("truetype");
+}
+
+
+body {
+	padding-top: 0px;
+	padding-bottom: 0px !important;
+	height: 0px !important;
+	vertical-align: top !important;
+}
+
+.row {
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+#header {
+	margin-top: 20px;
+}
+.no-padding {
+	padding: 0 !important;
+}
+#logo {
+	background: none;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: 25px;
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+}
+#logo  [class*="col-"]  {
+	background:#ffffff;	
+}
+
+#logo img {
+	float: left;
+	max-width: 90px;
+}
+#logo_text {
+  text-align: left;
+  color: #030303;
+  padding-left: 15px !important;	
+}
+
+#logo_text span {
+  font-size: 17px;
+  font-family: 'lato' sans-serif;
+  font-weight: 300;
+  /* margin-top: -5px; */
+  top: -10px;
+  position: relative;	
+	
+}
+
+#nom {
+  font-family: 'lato' sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0 !important;	
+}
+#menu {
+	background: none;
+}
+#menu div {
+	background: none;
+	color: #ffffff;
+	border-radius: none !important;
+	/* max-height: 25px; */
+	padding: 2px;
+	min-width: 80px;
+	text-align: center;
+	list-style: none;
+}
+#menu div a {
+	padding: 3px 15px;
+	color: #000000;
+	font-weight: bold;
+	font-weight: 700;
+	font-size: 15px;
+	font-family: 'lato' sans-serif;
+}
+#menu div {
+	float: left;
+	text-align: right;
+}
+/*#menu div:last-child {
+	margin-right: 0 !important;
+}*/
+
+#stats_header p {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 30px;
+	color: #ffffff;
+	font-weight: 100;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0;
+}
+#stats_header .stat {
+	background: #0c0c0c;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	min-height: 88px;
+	cursor: default;
+}
+#stats_header .compteur_b {
+	background: #0c0c0c;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+#stats_header .compteur_b span {
+	font-family: 'lato' sans-serif;
+	font-weight: 800;
+}
+#stats_header .stat span {
+	font-family: 'lato' sans-serif;
+	font-weight: 800;
+}
+#compteur {
+	padding-bottom: 0 !important;
+	padding-top: 0 !important;
+}
+#presentation {
+}
+#presentation #photo_bloc {
+	/*background:url(img/fond_photo.jpg);*/
+	background: #E87E04;
+	max-height: 280px;
+	overflow: hidden;
+}
+#presentation #photo_bloc img {
+	max-width: 190px;
+	float: right;
+	position: relative;
+	top: -80px;
+}
+#presentation #photo_bloc span {
+	background: #000000;
+	padding: 6px;
+	font-family: 'lato' sans-serif;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+#photo_bloc #text_1 {
+	left: 5px;
+	position: relative;
+	top: 25px;
+	display: none;
+}
+#photo_bloc #text_2 {
+	left: 45px;
+	position: relative;
+	top: 30px;
+	display: none;
+}
+#photo_bloc #text_3 {
+	left: 75px;
+	position: relative;
+	top: 35px;
+	display: none;
+}
+#presentation #text_p {
+	background: #ffffff;
+	padding-top: 0px;
+	padding-right: 0px;
+	color: #000000;
+	padding-bottom: 0px;
+}
+#presentation #text_p p {
+	text-align: justify;
+	padding-right: 15px;
+}
+#presentation #text_p h2 {
+	margin-top: 0;
+	font-family: 'lato' sans-sherif;
+}
+.barre_titre {
+	background: #E87E04;
+	font-size: 4px;
+}
+.text_perso_1 {
+	font-weight: 700;
+}
+.text_perso_2 {
+	font-weight: 300;
+}
+.text_perso_3 {
+	font-weight: 500;
+	color: #E87E04;
+}
+.lien_page {
+	background: #0c0c0c;
+	color: #E87E04;
+	padding: 5px;
+	font-family: 'lato' sans-serif;
+	font-weight: 300;
+	text-transform: inherit;
+	font-size: 15px;
+	float: right;
+	bottom: 0;
+	margin-bottom: 0;
+	margin-top: 85px;
+	position: relative;
+	margin-right: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	display: block;
+}
+.lien_page:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+#projet_recent {
+	font-family: 'lato' sans-serif;
+	margin-top: 0px;
+}
+#projet_recent .row {
+	background: #030303;
+}
+#projet_recent #titre {
+	background: #030303;
+	color: #ffffff;
+	padding: 0;
+	text-transform: uppercase;
+}
+#projet_recent #titre h2 {
+	padding-left: 15px;
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
+}
+#projet_recent #filtre {
+	background: #030303;
+	padding: 0;
+	margin-top: 0px;
+}
+#liste_projet [class*="col-"] {
+background: #ffffff;
+}
+.projet {
+	background: #000000 !important;
+	max-height: 149px;
+	overflow: hidden;
+}
+.projet img {
+	width: 100%;
+}
+.projet .lien {
+	color: #333333;
+	z-index: 61;
+	position: absolute;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding-top: 50px;
+	width: 100%;
+}
+.projet .masque {
+	background: url(img/masque_projet_2.jpg);
+	width: 100%;
+	height: 250px;
+	position: absolute;
+	background-size: cover !important;
+	top: -55px;
+}
+/*.projet .masque:hover {
+	background: rgba(0,0,0,0.0) !important;
+}*/
+.projet .masque p {
+	margin-top: 204px;
+	text-align: center;
+	font-size: 17px;
+	font-family: 'lato' sans-serif;
+	font-weight: 300;
+	color: #ffffff;
+	background: #0c0c0c;
+	padding: 5px;
+}
+
+.info_projet p {
+  font-family: 'lato' sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding: 0px;
+  text-align: center;
+  margin:0 !important;
+}
+
+.jauge {
+	padding: 5px !important;
+	text-align: center;
+}
+.jauge p {
+	margin-top: 7px;
+}
+.heure p {
+	margin-top: 19px;
+	text-align: center;
+}
+.tempsTotale {
+	font-family: 'lato' sans-serif;
+	font-weight: 800;
+	font-size: 22px;
+	margin-top: 25px;
+}
+
+.footer {
+	background:#0c0c0c !important;	
+	border-top: 5px solid #E87E04;
+}
+
+.footer .row {
+	margin-bottom: 0px !important;	
+	
+}
+
+.footer [class*="col-"] {
+background:#0c0c0c !important;
+}
+
+.footer #menu2 {
+	  list-style: none;
+  font-family: 'lato' sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 200;	
+  padding-left: 0px;
+  text-align:center;
+	
+}
+#footer_cv i {
+	  text-align: center;
+  display: block;
+  color: #ffffff;
+	
+}
+#footer_cv p {
+  text-align: center;
+  margin-top: 10px;
+  color: #ffffff;
+  font-family: 'lato' sans-serif;
+  font-weight: 200;	
+}
+#social {
+  color:#ffffff;	
+}
+#social span {
+	  display: block;
+  font-family: 'lato' sans-serif;
+  font-weight: 200;	
+    margin-bottom: 10px;
+}
+
+/* Custom, iPhone Retina */
+	@media only screen and (min-width : 320px){
+ 		
+		#presentation #text_p {
+		  padding-top: 15px !important;
+ 
+		}
+		
+		#presentation #photo_bloc img {
+			  left: 25px !important;
+		}
+		
+		#menu div {
+		  text-align: center;
+		  background: #030303;
+		  color: #ffffff;
+		  height: 50px;
+		}
+		
+		#menu div a {
+		  padding: 3px 15px;
+		  color: #ffffff;
+  		  top: 10px !important;
+		    position: relative;
+		}
+		
+		  #logo img {
+			   margin: 0 auto;
+			  /* display: block; */
+			  float: none;
+		  }
+		  
+		  #nom {
+			text-align:center;  
+		  }
+		  
+		  #logo_text span {
+			 text-align:center;
+			 display:block;
+			 margin-top:15px;
+		  }
+	}
+ 
+	/* Extra Small Devices, Phones */
+	@media only screen and (min-width : 480px){
+ 		
+		#presentation #text_p {
+		  padding-top: 15px !important;
+ 
+		}
+		
+		 #nom {
+			text-align:center;  
+		  }
+		  
+		  #logo_text span {
+			 text-align:center;
+			 display:block;
+			 margin-top:15px;
+		  }
+		
+	}
+ 
+	/* Small Devices, Tablets */
+	@media only screen and (min-width : 768px) and (max-width: 992px){
+ 		#menu div {
+		  text-align: center !important;
+		   background: #ffffff;
+		  color: #000000;
+		  height:auto;
+		}
+		
+		#menu div a {
+		  padding: 3px 15px;
+		  color: #000000;
+  		  top: 0px !important;
+		    position: relative;
+		}
+ 
+ 		#presentation #text_p {
+		  padding-top: 15px !important;
+ 
+		}
+		
+		 #logo img {
+			   margin:inherit;
+			  float: left;
+		  }
+		
+		 #nom {
+			text-align:left;  
+		  }
+		  
+		  #logo_text span {
+			 text-align:left;
+			 display:block;
+			 margin-top:15px;
+		  }
+	}
+	
+	/* Medium Devices, Desktops */
+	@media only screen and (min-width : 992px){
+		
+		#menu div {
+		  text-align: center !important;
+		   background: #ffffff;
+		  color: #000000;
+		  height:auto;
+		}
+		
+		#menu div a {
+		  padding: 3px 15px;
+		  color: #000000;
+  		  top: 0px !important;
+		    position: relative;
+		}
+		
+ 		#presentation #photo_bloc img {
+			  left: 25px !important;
+		}
+		
+		#logo img {
+			   margin:inherit;
+			  float: left;
+		  }
+		  
+	  #nom {
+		text-align:left;  
+	  }
+	  
+	  #logo_text span {
+		 text-align:left;
+		 display:block;
+		 margin-top:15px;
+	  }
+	}
+ 
+	/* Large Devices, Wide Screens */
+	@media only screen and (min-width : 1200px){
+		
+		#menu div {
+		  text-align: center !important;
+		   background: #ffffff;
+		  color: #000000;
+		  height:auto;
+		}
+		
+		#menu div a {
+		  padding: 3px 15px;
+		  color: #000000;
+  		  top: 0px !important;
+		    position: relative;
+		}
+		
+ 		#presentation #photo_bloc img {
+			  left: 0px !important;
+		}
+		
+		#logo img {
+			   margin:inherit;
+			  float: left;
+		  }
+		  
+		  #nom {
+			text-align:left;  
+		  }
+		  
+		  #logo_text span {
+			 text-align:left;
+			 display:block;
+			 margin-top:15px;
+		  }
+	}
+
+</style>
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/same-size.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/elusive-icons.min.css">
+
+<!-- Respomsive slider -->
+<link href="css/responsive-slider-parallax.css" rel="stylesheet">
+<!-- Google font 
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]--> 
+
+<!-- HEADER -->
+<div class="container">
+  <div class="row" id="header">
+    <div class="row-same-height row-full-height">
+      <div class="col-xs-12 col-sm-4 col-md-4 col-sm-height col-full-height no-padding" id="logo" > 
+      	<div class="col-xs-12 col-sm-2 col-md-2 col-sm-height col-full-height no-padding" ><img src="img/logo_3.png" /></div> 
+      	<div class="col-xs-12 col-sm-10 col-md-10 col-sm-height col-full-height no-padding" id="logo_text" > <p id="nom"> Barath POUBADY </p> <span> Développeur web / Back & Front </span> </div> 
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-4 col-sm-height col-full-height no-padding" id="menu">
+          <div class="col-xs-3 col-sm-3 col-md-3"><a href="#">Home</a></div>
+          <div class="col-xs-3 col-sm-3 col-md-3"><a href="#">Projets</a></div>
+          <div class="col-xs-3 col-sm-3 col-md-3"><a href="#">CV</a></div>
+          <div class="col-xs-3 col-sm-3 col-md-3"><a href="#">Contact</a></div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDER -->
+<div class="container">
+  <div class="row" style="margin-bottom: 0px !important;">
+    <div class="responsive-slider-parallax" data-spy="responsive-slider" data-parallax="true" data-parallax-direction="1">
+      <div class="slides-container" data-group="slides">
+        <ul>
+          <li>
+            <div class="slide-body" data-group="slide">
+              <div class="container">
+                <div class="wrapper">
+                  <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                    <h2>Développeur Web</h2>
+                    <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">Front & Back</div>
+                  </div>
+                  <div class="caption img-html5" data-animate="slideAppearLeftToRight" data-delay="200"> <img src="img/html5.png"> </div>
+                  <div class="caption img-css3" data-animate="slideAppearLeftToRight"> <img src="img/css3.png"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="slide-body" data-group="slide">
+              <div class="container">
+                <div class="wrapper">
+                  <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                    <h2>Twitter Boostrap</h2>
+                    <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">Compatible!</div>
+                  </div>
+                  <div class="caption img-bootstrap" data-animate="slideAppearDownToUp" data-delay="200"> <img src="img/bootstrap.png"> </div>
+                  <div class="caption img-twitter" data-animate="slideAppearUpToDown"> <img src="img/twitter.png"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="slide-body" data-group="slide">
+              <div class="container">
+                <div class="wrapper">
+                  <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="500" data-length="300">
+                    <h2>Custom animations</h2>
+                    <div class="caption sub" data-animate="slideAppearLeftToRight" data-delay="800" data-length="300">For any caption you use!</div>
+                  </div>
+                  <div class="caption img-jquery" data-animate="slideAppearDownToUp" data-delay="200"> <img src="img/jquery.png"> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <a class="slider-control left" href="#" data-jump="prev"><i class="fa fa-arrow-circle-o-left fa-2x"></i></a> <a class="slider-control right" href="#" data-jump="next"><i class="fa fa-arrow-circle-o-right fa-2x"></i></a>
+      <div class="pages"> <a class="page" href="#" data-jump-to="1">1</a> <a class="page" href="#" data-jump-to="2">2</a> <a class="page" href="#" data-jump-to="3">3</a> </div>
+    </div>
+  </div>
+</div>
+<div class="container" id="stats_header">
+  <div class="row">
+    <div class="stat col-sm-3 col-md-2">
+      <p><span id="frontDev">0</span>%</p>
+      <p class="stat_info" style="display:none;">Front Dev</p>
+    </div>
+    <div class="stat col-sm-3 col-md-2">
+      <p><span id="backDev">0</span>%</p>
+      <p class="stat_info" style="display:none;">Back Dev</p>
+    </div>
+    <div class="stat col-sm-3 col-md-2">
+      <p><span id="frameworkDev">0</span>%</p>
+      <p class="stat_info" style="display:none;">Framework</p>
+    </div>
+    <div class="stat col-sm-3 col-md-2">
+      <p><span id="webDesign">0</span>%</p>
+      <p class="stat_info" style="display:none;">Webdesign</p>
+    </div>
+    <div class="compteur_b col-sm-12 col-md-4"> <span style="color:#ffffff; font-weight:300; display:block; text-align:center;">Temps restant pour trouver un contrat pro :</span>
+      <p id="compteur"></p>
+    </div>
+  </div>
+</div>
+<div class="container" id="presentation">
+  <div class="row">
+    <div id="photo_bloc" class="col-md-4"> <span id="text_1">J'observe,</span><br/>
+      <br/>
+      <span id="text_2">j'analyse,</span><br/>
+      <br/>
+      <span id="text_3">et je code</span> <img src="img/photo.png" /> </div>
+    <div class="col-md-8" id="text_p">
+      <h2><span class="text_perso_1">BARATH</span> <span class="text_perso_2">POUBADY</span> - 23 ANS | <span class="text_perso_3">ÉTUDIANT EN MASTER</span></h2>
+      <p class="barre_titre">&emsp;</p>
+      <p style="font-size: 15px;">&emsp;&emsp;&emsp;Lorem ipsum <span style="font-weight:900; font-size: 18px; color:#E87E04;">dolor sit amet</span>, consectetur adipiscing elit. Ut ultrices odio rhoncus augue posuere, at blandit lectus varius. Sed sed sem nunc. <span style="font-weight:900; font-size: 18px;">Praesent</span> ut semper odio. Curabitur eget ante et ligula rutrum elementum sed nec elit. <span style="font-weight:900; font-size: 18px;">Nullam mollis,</span> diam in molestie sollicitudin, eros velit <span style="font-weight:900; font-size: 18px;">cursus lacus,</span> quis volutpat nibh lectus eu ligula.</p>
+      <a href="#" class="lien_page">Voir mon profil &nbsp;&nbsp;<i class="fa fa-plus-circle" style="color:#ffffff;"></i> </a> </div>
+  </div>
+</div>
+<div class="container" id="projet_recent">
+  <div class="row">
+    <div class="col-sm-10 col-md-10" id="titre">
+      <h2><span class="text_perso_1">Projets</span> <span class="text_perso_2">Recents</span> <span class="text_perso_3"></span></h2>
+    </div>
+    <div class="col-sm-2 col-md-2" id="filtre"> <a href="#" class="lien_page" style="margin-top: 15px;">Date &nbsp;&nbsp;<i class="fa fa-angle-down" style="color:#ffffff;"></i> </a> </div>
+    <div class="col-sm-12 col-md-12" id="titre">
+      <p class="barre_titre" style="padding:0; margin-bottom: 0;">&emsp;</p>
+    </div>
+  </div>
+</div>
+<div class="container" id="liste_projet">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="info_projet col-xs-12 col-sm-12 col-md-12 no-padding">
+        <p>Site web - Quiz Aressy 2015</p>
+      </div>
+      <div class="projet col-xs-12 col-sm-12 col-md-12 no-padding"> <a href="#"><i class="lien fa fa-link fa-3x"></i> 
+        <div class="masque">
+          <p>2015 <i class="fa fa-plus-square-o fa-1x" style="color:#E87E04;"></i></p>
+        </div>
+        <img src="img/projet_1.jpg"/></a> </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding jauge">
+        <input id="compt_0" class="knob" data-width="50" data-readOnly=true data-height="50" data-displayInput="false" data-displayPrevious=true data-angleOffset="180" data-fgColor="#000000" data-skin="tron" data-thickness=".2" value="0">
+        <p>Front Dev</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding jauge">
+        <input id="compt2_0" class="knob" data-width="50" data-readOnly=true data-height="50" data-displayInput="false" data-displayPrevious=true data-angleOffset="180" data-fgColor="#000000" data-skin="tron" data-thickness=".2" value="0">
+        <p>Back Dev</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding heure">
+        <p><span class="tempsTotale" id="tempsTotale_0">0</span> H</p>
+        <p>Temps total</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="info_projet col-xs-12 col-sm-12 col-md-12 no-padding">
+        <p>Site web - Quiz Aressy 2015</p>
+      </div>
+      <div class="projet col-xs-12 col-sm-12 col-md-12 no-padding"><a href="#"> <i class="lien fa fa-link fa-3x"></i> 
+        <div class="masque">
+          <p>2015 <i class="fa fa-plus-square-o fa-1x" style="color:#E87E04;"></i></p>
+        </div>
+        <img src="img/projet_2.jpg"/></a> </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding jauge">
+        <input id="compt_1" class="knob" data-width="50" data-readOnly=true data-height="50" data-displayInput="false" data-displayPrevious=true data-angleOffset="180" data-fgColor="#000000" data-skin="tron" data-thickness=".2" value="0">
+        <p>Front Dev</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding jauge">
+        <input id="compt2_1" class="knob" data-width="50" data-readOnly=true data-height="50" data-displayInput="false" data-displayPrevious=true data-angleOffset="180" data-fgColor="#000000" data-skin="tron" data-thickness=".2" value="0">
+        <p>Back Dev</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding heure">
+        <p><span class="tempsTotale" id="tempsTotale_1">0</span> H</p>
+        <p>Temps total</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="info_projet col-xs-12 col-sm-12 col-md-12 no-padding">
+        <p>Site web - Quiz Aressy 2015</p>
+      </div>
+      <div class="projet col-xs-12 col-sm-12 col-md-12 no-padding"> <a href="#"><i class="lien fa fa-link fa-3x"></i> 
+        <div class="masque">
+          <p>2015 <i class="fa fa-plus-square-o fa-1x" style="color:#E87E04;"></i></p>
+        </div>
+        <img src="img/projet_3.jpg"/></a> </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding jauge">
+        <input id="compt_2" class="knob" data-width="50" data-readOnly=true data-height="50" data-displayInput="false" data-displayPrevious=true data-angleOffset="180" data-fgColor="#000000" data-skin="tron" data-thickness=".2" value="0">
+        <p>Front Dev</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding jauge">
+        <input id="compt2_2" class="knob" data-width="50" data-readOnly=true data-height="50" data-displayInput="false" data-displayPrevious=true data-angleOffset="180" data-fgColor="#000000" data-skin="tron" data-thickness=".2" value="0">
+        <p>Back Dev</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding heure">
+        <p><span class="tempsTotale" id="tempsTotale_2">0</span> H</p>
+        <p>Temps total</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="info_projet col-sm-12 col-md-12 no-padding">
+        <p>Site web - Quiz Aressy 2015</p>
+      </div>
+      <div class="projet col-xs-12 col-sm-12 col-md-12 no-padding"> <a href="#"> <i class="lien fa fa-link fa-3x"></i> 
+        <div class="masque">
+          <p>2015 <i class="fa fa-plus-square-o fa-1x" style="color:#E87E04;"></i></p>
+        </div>
+        <img src="img/projet_4.jpg"/></a> </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding jauge">
+        <input id="compt_3" class="knob" data-width="50" data-readOnly=true data-height="50" data-displayInput="false" data-displayPrevious=true data-angleOffset="180" data-fgColor="#000000" data-skin="tron" data-thickness=".2" value="0">
+        <p>Front Dev</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding jauge">
+        <input id="compt2_3" class="knob" data-width="50" data-readOnly=true data-height="50" data-displayInput="false" data-displayPrevious=true data-angleOffset="180" data-fgColor="#000000" data-skin="tron" data-thickness=".2" value="0">
+        <p>Back Dev</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 no-padding heure">
+        <p><span class="tempsTotale" id="tempsTotale_3">0</span> H</p>
+        <p>Temps total</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid footer">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div class="container">
+        <div class="row no-padding">
+         <div class="col-xs-12 col-sm-3 col-md-3">
+           <p style="height:200px; border-right:#313131 1px solid;"> <img src="img/logo_2_b.png" style="width:100%;" /></p>
+         </div>
+         <div class="col-xs-12 col-sm-3 col-md-3" style="padding-left: 0px;"> 
+           <div style="height:200px; border-right:#313131 1px solid;"> <ul id="menu2"><li>Accueil</li> <li>Projets</li> <li>CV</li> <li>Contact</li></ul></div>
+         </div>
+         <div class="col-xs-12 col-sm-3 col-md-3">
+           <div style="height:200px; border-right:#313131 1px solid;" id="footer_cv"><i class="fa fa-file-pdf-o fa-3x"></i><p>Télécharger mon CV</p></div>
+         </div>
+         <div class="col-xs-12 col-sm-3 col-md-3">
+           <div style="height:200px;" id="social"> <span>Visitez mon réseaux : </span> <ul style="padding-top: 15px;"> <i class="el el-viadeo el-2x"></i> <i class="el el-linkedin el-2x"></i> <i class="el el-facebook el-2x"></i> <i class="el el-googleplus el-2x"></i></ul> </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- /container --> 
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> 
+<script src="js/vendor/bootstrap.min.js"></script> 
+<script src="js/main.js"></script> 
+<script src="js/vendor/jquery.event.move.js"></script> 
+<script src="js/vendor/responsive-slider.js"></script> 
+<script src="js/jquery.animateNumber.min.js"></script> 
+<script src="js/jquery-ui.min.js"></script> 
+<script>
+$(document).ready(function(e) {
+	
+	$('#frontDev').animateNumber({ number: 78 }, 1200);
+	$('#backDev').animateNumber({ number: 45 }, 1250);
+	$('#frameworkDev').animateNumber({ number: 33 }, 1270);
+	$('#webDesign').animateNumber({ number: 22 }, 1280);
+	
+	var i = 0;
+	var j = 0;
+	
+	$(window).scroll(function () { 
+	
+		console.log($(this).scrollTop());
+		
+		if($(this).scrollTop() > 540) {
+			i++;
+		}
+		
+		if(i === 1){
+			
+			i++;
+			
+			var jauge = [
+				["75", "25", "12"],
+				["35", "65", "17"],
+				["15", "85", "9"],
+				["22", "78", "22"],
+			];
+
+			$(".knob").each(function(index, element) {
+			//for(index = 0; index < jauge.length; index++) {
+				
+				if(index < jauge.length){
+				
+					console.log("i=" + i);
+					console.log('#compt_' + (index) + " | " + jauge[index][0]+ " | " + jauge[index][1]+ " | " + jauge[index][2]);
+					
+					/* PROJET */ 
+					$('#tempsTotale_'+(index)).animateNumber({ number: jauge[index][2] }, 1280);
+				
+					// JAUGE
+					$("#compt_"+(index)).animateNumber({ 
+					
+					number: jauge[index][0] ,
+					numberStep: function(now, tween) {
+							$("#compt_"+(index)).val(now).trigger("change");
+						}
+						
+					}, 1280);
+					
+					//JAUGE
+					$('#compt2_'+(index)).animateNumber({ 
+					
+					number: jauge[index][1] ,
+					numberStep: function(now, tween) {
+							$("#compt2_"+(index)).val(now).trigger("change");
+						}
+						
+					}, 1280);	
+				}
+            });
+
+		}
+		
+		if($(this).scrollTop() > 200) {
+			j++;
+		}
+		
+		if(j === 1){
+			j++;
+			
+			console.log("j=" + j);
+			
+			$('#text_1').fadeIn(400);
+			$('#text_2').delay( 800 ).fadeIn(450);
+			$('#text_3').delay( 1200 ).fadeIn(450);
+
+		}
+
+	});
+
+});
+
+</script> 
+<script>
+
+	$(document).ready(function(e) {
+
+		$(".projet").each(function(index, element) {
+
+            $(this).mouseenter(function(){
+				
+				$(this).find("i").stop().animate({
+					
+					"margin-top":-100,
+					
+				}, "fast");
+				
+				$(this).find("p").stop().animate({
+					
+					"margin-top":170,
+					
+				}, "fast");
+				
+				$(this).find(".masque").css('background-image', 'url(img/trans.png)');
+
+				
+			}).mouseleave(function(){
+				
+				$(this).find("i").stop().animate({
+					
+					"margin-top":0,
+					
+				}, "fast");
+				
+				$(this).find("p").stop().animate({
+					
+					"margin-top":205,
+					
+				}, "fast");
+				
+				$(this).find(".masque").css('background-image', 'url(img/masque_projet_2.jpg)');
+				
+			});
+				
+		});
+
+		/* POURCENTAGE */
+
+        $(".stat").each(function(index, element) {
+
+            $(this).mouseenter(function(){
+
+				$(this).children('p').stop().animate({
+					"font-size":20,
+					"padding":1,
+					
+				},function(){
+					$(this).parent().children('.stat_info').stop().fadeIn(250);
+				});
+
+				$(this).parent().children('.stat_info').stop().animate({
+					"font-size":21,
+					"padding":1,
+					
+				});
+
+			}).mouseleave(function(){
+				
+				
+				$(this).children('.stat_info').stop().fadeOut(250, function(){
+				
+					$(this).parent().children('p').stop().animate({
+						"font-size":30,
+						"padding-top":10,
+						"padding-bottom":10,
+					});
+					
+				});	
+				
+			});
+        });
+    });
+
+</script> 
+
+<!-- JAUGE CIRCULAIRE --> 
+
+<!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]--> 
+<script src="dist/jquery.knob.min.js"></script> 
+<script>
+
+			$(function($) {
+
+                $(".knob").knob({
+                    change : function (value) {
+                        //console.log("change : " + value);
+                    },
+                    release : function (value) {
+                        //console.log(this.$.attr('value'));
+                        //console.log("release : " + value);
+                    },
+                    cancel : function () {
+                        console.log("cancel : ", this);
+                    },
+                    /*format : function (value) {
+                        return value + '%';
+                    },*/
+                    draw : function () {
+
+                        // "tron" case
+                        if(this.$.data('skin') == 'tron') {
+
+                            this.cursorExt = 0.3;
+
+                            var a = this.arc(this.cv)  // Arc
+                                , pa                   // Previous arc
+                                , r = 1;
+
+                            this.g.lineWidth = this.lineWidth;
+
+                            if (this.o.displayPrevious) {
+                                pa = this.arc(this.v);
+                                this.g.beginPath();
+                                this.g.strokeStyle = this.pColor;
+                                this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
+                                this.g.stroke();
+                            }
+
+                            this.g.beginPath();
+                            this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
+                            this.g.stroke();
+
+                            this.g.lineWidth = 2;
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.o.fgColor;
+                            this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                            this.g.stroke();
+
+                            return false;
+                        }
+                    }
+                });
+
+               
+            });
+
+
+</script> 
+
+<!-- COMPTE A REBOUR --> 
+
+<script src="js/jquery.countdown.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+	
+   $("#compteur")
+   .countdown("2015/09/16", function(event) {
+     $(this).text(
+       event.strftime('J-%D | %-H : %-M : %-S')
+     );
+   });
+		
+});
+	</script>
+</body>
+</html>
